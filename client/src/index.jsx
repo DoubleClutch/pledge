@@ -3,21 +3,20 @@ import {render} from 'react-dom';
 import StatefulComponent from './components/StatefulComponent.jsx';
 import StatelessComponent from './components/StatelessComponent.jsx';
 import style from './main.css';
+import PledgeSupport from './components/PledgeSupport';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      renderMe: [1, 2, 3]
+      pledgeSupportAmounts = ['supportTest1', 'supportTest2'] // these will be replaced with objects containing necessary information
     };
   }
   
   render () {
     return (
       <div>
-        <h1> Up and running! </h1>
-        <StatelessComponent />
-        <StatefulComponent />
+        <PledgeSupport pledgeSupportAmounts={this.state.PledgeSupportAmounts}/>
       </div>
     )
   }
