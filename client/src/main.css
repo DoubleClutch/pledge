@@ -1,12 +1,13 @@
-h1 {
-    color: blue;
-}
 
-p {
-    color: red;
-}
+.plede-info-container {}
 
-button {
-    color: green;
-}
+.pledge-info {}
+
+.pledge-info-number {}
+
+.pledge-info-project-btn {}
+
+.pledge-info-remind-btn {}
+
+.pledge-info-time-stamp {}
 
