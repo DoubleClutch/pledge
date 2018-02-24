@@ -4,7 +4,7 @@ import StatefulComponent from './components/StatefulComponent.jsx';
 import StatelessComponent from './components/StatelessComponent.jsx';
 import PledgeInfo from './components/PledgeInfo.jsx'
 import style from './main.css';
-import PledgeSupport from './components/PledgeSupport';
+import PledgeSupport from './components/PledgeSupport.jsx';
 
 
 const date = new Date(); // temporary work around
@@ -14,7 +14,7 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-      pledgeSupportAmounts = ['supportTest1', 'supportTest2'] // these will be replaced with objects containing necessary information
+      pledgeSupportAmounts: ['supportTest1', 'supportTest2'] // these will be replaced with objects containing necessary information
     };
   }
   
@@ -28,7 +28,7 @@ class App extends React.Component {
           daysToGo: 18,
           timeStamp: date.toString()
         }}/>
-        <PledgeSupport pledgeSupportAmounts={this.state.PledgeSupportAmounts}/>
+        <PledgeSupport pledgeSupportAmounts={this.state.pledgeSupportAmounts}/>
       </div>
     )
   }
