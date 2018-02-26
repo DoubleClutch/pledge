@@ -2,59 +2,27 @@ import React from 'react';
 import style from './../main.css';
 const date = new Date(); // temporary work around
 
-let PledgeInfoComponentReady = false;
-
 class PledgeInfo extends React.Component {
   constructor(props) {
     super(props);
-    // this.props.setReady = this.props.setReady.bind(this)
-    this.state = {
-      // pledgeInfo: {}
-      // pledgeInfo: this.props.info
-      // pledgeInfo: {
-      //   pledgeTotal: '10,420',
-      //   pledgeGoal: '7,500',
-      //   backers: 352,
-      //   daysToGo: 18,
-      //   timeStamp: date.toString()
-      // }
-    }
+    this.state = {}
   }
-  componentWillMount() {
-    // this.setState({
-    //   pledgeInfo: this.props.info
-    // })
-    this.testUpdateState();
+
+  testUpdateState () {
+    setTimeout(()=>{
+      this.setState({
+      pledgeInfo: {
+        pledgeTotal: '10,420',
+        pledgeGoal: '7,500',
+        backers: 352,
+        daysToGo: 18,
+        timeStamp: date.toString()
+      }
+      })
+    }, 500)
   }
-  // componentWillMount() {
-  //   this.setState({
-  //     pledgeInfo: this.props.info
-  //   });
-  //   if (this.props.setReady && this.state.pledgeInfo) {
-  //     this.props.setReady();
-  //   }
-  // }
-  // componentDidMount() {
-  //   // if (this.state.pledgeInfo) {
-  //     PledgeInfoComponentReady = true
-  //   // }
-  // }
-   testUpdateState () {
-     setTimeout(()=>{
-       this.setState({
-        pledgeInfo: {
-          pledgeTotal: '10,420',
-          pledgeGoal: '7,500',
-          backers: 352,
-          daysToGo: 18,
-          timeStamp: date.toString()
-        }
-       })
-     }, 500)
-   }
   
   render() {
-    // console.log(this.props)
     if (this.state.pledgeInfo) {
       return (
         <div className='pledge-info-container'>
@@ -74,9 +42,6 @@ class PledgeInfo extends React.Component {
     }
   }
 }
-// if (PledgeInfoComponentReady) {
-  // window.PledgeInfo = PledgeInfo;
-// }
 
 
 export default PledgeInfo;
