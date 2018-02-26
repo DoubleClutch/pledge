@@ -8,6 +8,7 @@
 
   <body>
       <div id="pledge-info"></div>
+      <div id="pledge-support"></div>
       <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
       <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
       <script src="http://localhost:3001/bundle.js"></script>
@@ -15,6 +16,12 @@
         ReactDOM.render(
           React.createElement(PledgeInfo),
           document.getElementById('pledge-info')
+        );
+      </script>
+      <script>
+        ReactDOM.render(
+          React.createElement(PledgeSupport),
+          document.getElementById('pledge-support')
         );
       </script>
     </body>
