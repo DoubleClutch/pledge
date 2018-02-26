@@ -5,23 +5,39 @@ import PledgeSupportAmount from './PledgeSupportAmount.jsx'
 class PledgeSupport extends React.Component {
   constructor(props) {
     super(props);
-    state = {};
+    this.state = {};
+  }
+
+  componentDidMount() {
+    this.testUpdateState();
+  }
+
+  testUpdateState () {
+    setTimeout(() => {
+      this.setState({
+        pledgeSupportAmounts: ['test1', 'test2']
+      })
+    }, 250);
   }
   
   render() {
-    return (
-      <div className='pledge-support-contaner' >
+    if (this.state.pledgeSupportAmounts) {
+      return (
+        <div className='pledge-support-contaner' >
           <h1>Support</h1>
-          <div className='pledge-support-make-pledge-component'>
   
+          <div className='pledge-support-make-pledge-component'>
           </div>
   
-          {props.pledgeSupportAmounts.map((pledge, index) => (
+          {this.state.pledgeSupportAmounts.map((pledge, index) => (
               <PledgeSupportAmount value={pledge} key={index} />
           ))}
-  
-      </div>
-    );
+    
+        </div>
+      );
+    } else {
+      return null;
+    }
   }
 }
 

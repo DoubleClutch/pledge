@@ -8,6 +8,10 @@ class PledgeInfo extends React.Component {
     this.state = {}
   }
 
+  componentDidMount() {
+    this.testUpdateState();
+  }
+
   testUpdateState () {
     setTimeout(()=>{
       this.setState({
@@ -19,7 +23,7 @@ class PledgeInfo extends React.Component {
         timeStamp: date.toString()
       }
       })
-    }, 500)
+    }, 250);
   }
   
   render() {
