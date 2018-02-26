@@ -2,7 +2,7 @@ import React from 'react';
 import style from './../main.css';
 import PledgeSupportAmount from './PledgeSupportAmount.jsx'
 
-class PledgeSupport extends React.Compnent {
+class PledgeSupport extends React.Component {
   constructor(props) {
     super(props);
     state = {};
