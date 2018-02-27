@@ -1,9 +1,19 @@
 
-.plede-info-container {}
+.pledge-info-container {
+  border: 1px solid black;
+}
 
 .pledge-info {}
 
-.pledge-info-number {}
+Pledge-Info-pledge-info-number {
+  color: red;
+}
+.info {
+  color: red;
+}
+p {
+  color: blue;
+}
 
 .pledge-info-project-btn {}
 
