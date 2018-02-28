@@ -73,5 +73,6 @@ div {
   .pledgeInfoTimeStamp span {
     padding-bottom: 0.2em;
     border-bottom: 1px solid #282828;
+    /* margin-bottom: 1px; */
     cursor: pointer;
   }
