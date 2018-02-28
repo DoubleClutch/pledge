@@ -8,6 +8,7 @@
 
 .pledge-info-container {
   border-top: 0.25em solid #009E74;
+  padding-top: 1em;
 }
 
 .pledge-info {
@@ -70,4 +71,5 @@ button:hover {
 .pledge-info-time-stamp span {
   padding-bottom: 0.2em;
   border-bottom: 1px solid #282828;
+  cursor: pointer;
 }
