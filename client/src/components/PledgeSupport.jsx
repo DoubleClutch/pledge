@@ -1,5 +1,5 @@
 import React from 'react';
-import style from './../main.css';
+// import style from './../main.css';
 import PledgeSupportAmount from './PledgeSupportAmount.jsx'
 
 class PledgeSupport extends React.Component {
@@ -50,7 +50,7 @@ class PledgeSupport extends React.Component {
   render() {
     if (this.state.pledgeSupportAmounts) {
       return (
-        <div className='pledge-support-contaner' >
+        <div className='container pledge-support-container' >
           <h1 className='pledge-support-main-title'>Support</h1>
   
           <div className='pledge-support-make-pledge-component'>
