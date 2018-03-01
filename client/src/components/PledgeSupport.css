@@ -1,44 +1,56 @@
-.pledge-support-container {
+.pledgeSupportContainer {
   font-family: 'Arimo', 'Montserrat', sans-serif;
 }
 
-.pledge-support-main-title {
+.pledgeSupportMainTitle {
   font-size: 2em;
-  margin: 3em 0;
+  margin: 1em 0;
 }
 
-.pledge-support-make-pledge-component {
+.pledgeSupportMakePledgeComponent {
   border: 1px solid #dcdedd;
+  text-align: center;
 }
 
-.pledge-support-make-pledge-component h2 {
+.pledgeSupportMakePledgeComponent h2 {
   font-size: 1.75em;
   padding: 0.75em 0;
 }
 
-.pledge-support-make-pledge-component input {
+.pledgeSupportMakePledgeComponent input {
   border: 1px solid #dcdedd;
-  width: 80%;
+  width: 75%;
   font-size: 1.5em;
+  display: inline;
+  height: 2em;
+  margin-bottom: 3em;
+}
+.pledgeSupportMakePledgeComponent .currency {
+  display: inline;
+  padding: 1.2em 1.5em 0.8em;
+  margin-bottom: 3em;
 }
 
 :focus {
   outline: 0;
 }
 
-.pledge-support-make-pledge-component ::placeholder {
+.pledgeSupportMakePledgeComponent ::placeholder {
   color: #282828;
   padding-left: 0.75em;
 }
 
-.pledge-support-make-pledge-component .input-field {
-  margin-bottom: 4em;
+.pledgeSupportMakePledgeComponent .inputField {
+  /* width: 75%; */
+  /* border: 1px solid black; */
+  height: 3em;
+  margin: 0 8em 3em;
 }
 
-.pledge-support-make-pledge-component .input-field:hover input, .pledge-support-make-pledge-component .input-field:hover div {
+.pledgeSupportMakePledgeComponent .inputField:hover input, .pledgeSupportMakePledgeComponent .inputField:hover div {
   border-color: #009E74;
 }
-/* .pledge-support-make-pledge-component input:hover, .pledge-support-make-pledge-component .currency:hover {
+/* .pledgeSupportMakePledgeComponent input:hover, .pledgeSupportMakePledgeComponent .currency:hover {
   border-color: #009E74; */
   /* border: 1px solid #009E74; */
   /* width: 80%; */
