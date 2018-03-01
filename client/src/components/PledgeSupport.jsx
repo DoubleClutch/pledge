@@ -1,5 +1,5 @@
 import React from 'react';
-// import style from './../main.css';
+import style from './PledgeSupport.css';
 import PledgeSupportAmount from './PledgeSupportAmount.jsx'
 
 class PledgeSupport extends React.Component {
@@ -24,7 +24,7 @@ class PledgeSupport extends React.Component {
               includes: ['Kickstarter-Exclusive Digital Wallpaper & Ringtone Set']
             },
             deliveryDate: 'Oct 2018',
-            shipsTo: null,
+            shipsTo: 'Anywhere in the world',
             backers: 59
           },
           {
@@ -39,7 +39,7 @@ class PledgeSupport extends React.Component {
               ]
             },
             deliveryDate: 'Oct 2018',
-            shipsTo: null,
+            shipsTo: 'Anywhere in the world',
             backers: 625
           }
         ]
@@ -50,16 +50,23 @@ class PledgeSupport extends React.Component {
   render() {
     if (this.state.pledgeSupportAmounts) {
       return (
-        <div className='container pledge-support-container' >
-          <h1 className='pledge-support-main-title'>Support</h1>
-  
-          <div className='pledge-support-make-pledge-component'>
+        <div className={style.pledgeSupportContainer}>
+          <h1 className={style.pledgeSupportMainTitle}>Support</h1>
+
+          <div className={style.pledgeSupportMakePledgeComponent}>
+          <div >
+            <h2>Make a Pledge without a reward</h2>
           </div>
-  
+            <div className={style.inputField}>
+              <div className={style.currency}>$</div>
+              <input placeholder='10'></input>
+            </div>
+          </div>
+
           {this.state.pledgeSupportAmounts.map((pledge, index) => (
               <PledgeSupportAmount value={pledge} key={index} />
           ))}
-    
+
         </div>
       );
     } else {

@@ -1,0 +1,64 @@
+.pledgeSupportContainer {
+  font-family: 'Arimo', 'Montserrat', sans-serif;
+}
+
+.pledgeSupportMainTitle {
+  font-size: 2em;
+  margin: 3em 0;
+}
+
+.pledgeSupportMakePledgeComponent {
+  border: 1px solid #dcdedd;
+  text-align: center;
+}
+
+.pledgeSupportMakePledgeComponent h2 {
+  font-size: 1.75em;
+  padding: 0.75em 0;
+}
+
+.pledgeSupportMakePledgeComponent input {
+  border: 1px solid #dcdedd;
+  width: 75%;
+  font-size: 1.5em;
+  display: inline;
+  height: 2em;
+  margin-bottom: 4em;
+}
+.pledgeSupportMakePledgeComponent .currency {
+  display: inline;
+  padding: 1.2em 1.5em 0.8em;
+  margin-bottom: 4em;
+}
+
+:focus {
+  outline: 0;
+}
+
+.pledgeSupportMakePledgeComponent ::placeholder {
+  color: #282828;
+  padding-left: 0.75em;
+}
+
+.pledgeSupportMakePledgeComponent .inputField {
+  /* width: 75%; */
+  /* border: 1px solid black; */
+  height: 3em;
+  margin: 0 8em 4em;
+}
+
+.pledgeSupportMakePledgeComponent .inputField:hover input, .pledgeSupportMakePledgeComponent .inputField:hover div {
+  border-color: #009E74;
+}
+/* .pledgeSupportMakePledgeComponent input:hover, .pledgeSupportMakePledgeComponent .currency:hover {
+  border-color: #009E74; */
+  /* border: 1px solid #009E74; */
+  /* width: 80%; */
+/* } */
+ 
+.currency {
+  border: 1px solid #dcdedd;
+  border-width: 1px 0 1px 1px;
+  padding: 1em 1.5em;
+  color: #037362;
+}
