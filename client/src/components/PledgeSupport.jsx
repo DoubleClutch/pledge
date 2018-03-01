@@ -1,5 +1,5 @@
 import React from 'react';
-// import style from './../main.css';
+import style from './PledgeSupport.css';
 import PledgeSupportAmount from './PledgeSupportAmount.jsx'
 
 class PledgeSupport extends React.Component {

@@ -1,0 +1,52 @@
+.pledge-support-container {
+  font-family: 'Arimo', 'Montserrat', sans-serif;
+}
+
+.pledge-support-main-title {
+  font-size: 2em;
+  margin: 3em 0;
+}
+
+.pledge-support-make-pledge-component {
+  border: 1px solid #dcdedd;
+}
+
+.pledge-support-make-pledge-component h2 {
+  font-size: 1.75em;
+  padding: 0.75em 0;
+}
+
+.pledge-support-make-pledge-component input {
+  border: 1px solid #dcdedd;
+  width: 80%;
+  font-size: 1.5em;
+}
+
+:focus {
+  outline: 0;
+}
+
+.pledge-support-make-pledge-component ::placeholder {
+  color: #282828;
+  padding-left: 0.75em;
+}
+
+.pledge-support-make-pledge-component .input-field {
+  margin-bottom: 4em;
+}
+
+.pledge-support-make-pledge-component .input-field:hover input, .pledge-support-make-pledge-component .input-field:hover div {
+  border-color: #009E74;
+}
+/* .pledge-support-make-pledge-component input:hover, .pledge-support-make-pledge-component .currency:hover {
+  border-color: #009E74; */
+  /* border: 1px solid #009E74; */
+  /* width: 80%; */
+/* } */
+ 
+.currency {
+  border: 1px solid #dcdedd;
+  border-width: 1px 0 1px 1px;
+  padding: 1em 1.5em;
+  color: #037362;
+}
