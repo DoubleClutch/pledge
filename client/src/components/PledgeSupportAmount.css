@@ -1,13 +1,44 @@
-* {
-    font-family: 'Arimo', 'Montserrat', sans-serif;
-  }
+.pledgeSupportAmountContainer {
+  font-family: 'Arimo', 'Montserrat', sans-serif;
+  border: 1px solid #dcdedd;
+  margin-top: 3em;
+  padding: 3em;
+}
 
-.pledge-support-amount-container {}
+.pledgeSupportAmount h1 {
+  font-size: 1.75em;
+  font-weight: 100;
+}
 
-.pledge-support-amount {}
+.pledgeSupportStaticInfoSmall {
+  font-size: 0.75em;
+  font-weight: 100;
+  color: #656969;
+  margin-top: 3em;
+  margin-bottom: 0.5em;
+}
 
-.pledge-support-description {}
+.pledgeSupportDescription {
+  font-size: 1em;
+  color: #727575;
+}
 
-.pledge-support-shipping {}
+.pledgeSupportDescription h4 {
+  font-size: 1.5em;
+  font-weight: 100;
+  color: #282828;
+}
 
-.pledge-support-includes {}
+.pledgeSupportDescription li {
+  color: #282828;
+  padding: 0.5em 0;
+}
+
+.pledgeSupportShipping div {
+  display: inline-block;
+}
+
+.pledgeSupportShipsTo {
+  float: right;
+}
+

@@ -24,7 +24,7 @@ class PledgeSupport extends React.Component {
               includes: ['Kickstarter-Exclusive Digital Wallpaper & Ringtone Set']
             },
             deliveryDate: 'Oct 2018',
-            shipsTo: null,
+            shipsTo: 'Anywhere in the world',
             backers: 59
           },
           {
@@ -39,7 +39,7 @@ class PledgeSupport extends React.Component {
               ]
             },
             deliveryDate: 'Oct 2018',
-            shipsTo: null,
+            shipsTo: 'Anywhere in the world',
             backers: 625
           }
         ]
@@ -62,6 +62,11 @@ class PledgeSupport extends React.Component {
               <input placeholder='10'></input>
             </div>
           </div>
+
+          {this.state.pledgeSupportAmounts.map((pledge, index) => (
+              <PledgeSupportAmount value={pledge} key={index} />
+          ))}
+
         </div>
       );
     } else {
