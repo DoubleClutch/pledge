@@ -15,10 +15,8 @@ var pledgeSchema = mongoose.Schema({
 //     unique: true
 //   }
   projectId: Number,
-  pledgeData: {
-      pledgeInfo: String,
-      pledgeSupport: Array
-  }
+  pledgeInfo: String,
+  pledgeSupport: String
 });
 
 var PledgeModel = mongoose.model('PledgeModel', pledgeSchema);
