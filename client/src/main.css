@@ -3,7 +3,12 @@
 
 .pledge-info {}
 
-.pledge-info-number {}
+Pledge-Info-pledge-info-number {
+  color: red;
+}
+.info {
+  color: red;
+}
 
 .pledge-info-project-btn {}
 
