@@ -23,12 +23,12 @@
   font-size: 1.5em;
   display: inline;
   height: 2em;
-  margin-bottom: 3em;
+  margin-bottom: 4em;
 }
 .pledgeSupportMakePledgeComponent .currency {
   display: inline;
   padding: 1.2em 1.5em 0.8em;
-  margin-bottom: 3em;
+  margin-bottom: 4em;
 }
 
 :focus {
@@ -44,7 +44,7 @@
   /* width: 75%; */
   /* border: 1px solid black; */
   height: 3em;
-  margin: 0 8em 3em;
+  margin: 0 8em 4em;
 }
 
 .pledgeSupportMakePledgeComponent .inputField:hover input, .pledgeSupportMakePledgeComponent .inputField:hover div {

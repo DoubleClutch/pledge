@@ -3,11 +3,11 @@ import style from './PledgeSupportAmount.css';
 import Includes from './Includes.jsx'
 
 const PledgeSupportAmount = (props) => (
-  <div className='pledge-support-amount-container'>
-    <div className='pledge-support-amount'>
+  <div className='pledgeSupportAmountContainer'>
+    <div className='pledgeSupportAmount'>
       <h1>Pledge ${props.value.pledgeAmount} or more</h1>
     </div>
-    <div className='pledge-support-description'>
+    <div className='pledgeSupportDescription'>
       <h2>{props.value.pledgeDescription.title}</h2>
       <div>
         <p>{props.value.pledgeDescription.description}</p>
@@ -19,7 +19,7 @@ const PledgeSupportAmount = (props) => (
       </div>
     </div>
 
-    <div className='pledge-support-shipping'>
+    <div className='pledgeSupportShipping'>
       <h3>ESTIMATED DELIVERY</h3>
       {props.value.deliveryDate}
       <h3>SHIPS TO</h3>
