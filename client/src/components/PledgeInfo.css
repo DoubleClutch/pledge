@@ -1,12 +1,14 @@
 
-div {
+/* div {
     font-family: 'Arimo', 'Montserrat', sans-serif;
     background-color: #fbfbfa;
-  }
+  } */
   
   /* #pledge-info {} */
   
   .pledgeInfoContainer {
+    font-family: 'Arimo', 'Montserrat', sans-serif;
+    background-color: #fbfbfa;
     border-top: 0.25em solid #009E74;
     padding-top: 1em;
   }
@@ -46,7 +48,9 @@ div {
     background-color: #037362;
   }
   
-  
+  :focus {
+    outline: 0;
+  }
   
   .pledgeInfoRemindBtn {
     border: 1px solid #dcdedd;
@@ -67,7 +71,9 @@ div {
   
   .pledgeInfoTimeStamp {
     color: #282828;
-    margin-top: 3em;
+    line-height: 1.75em;
+    padding-bottom: 0.5em;
+    /* padding-bottom: 3em; */
   }
   
   .pledgeInfoTimeStamp span {

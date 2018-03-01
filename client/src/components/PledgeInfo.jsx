@@ -40,7 +40,7 @@ class PledgeInfo extends Component {
           <div><p className={style.pledgeInfoNumber}>{this.state.pledgeInfo.daysToGo}</p></div>
           <div><p className={style.pledgeInfo}>days to go</p></div>
           <div><button className={style.pledgeInfoProjectBtn} >Back this project</button></div>
-          <div><button className={style.pledgeInfoRemindBtn} >Remind me</button></div>
+          <div><button className={style.pledgeInfoRemindBtn} ><i className="fa fa-heart"></i> Remind me</button></div>
           <div><p className={style.pledgeInfoTimeStamp}><span>All or nothing.</span> This project will only be funded if it reaches its goal by {this.state.pledgeInfo.timeStamp}</p></div>
         </div>
       )
