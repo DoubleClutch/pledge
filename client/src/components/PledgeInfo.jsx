@@ -1,7 +1,9 @@
+
 import React, { Component } from 'react';
 import style from './PledgeInfo.css';
 // import style from './../main.css';
 // import './../main.css';
+
 const date = new Date(); // temporary work around
 
 class PledgeInfo extends Component {
@@ -32,6 +34,7 @@ class PledgeInfo extends Component {
     if (this.state.pledgeInfo) {
       console.log(style)
       return (
+
         <div className={style.pledgeInfoContainer}>
           <div><p className={style.pledgeInfoNumber}><span>${this.state.pledgeInfo.pledgeTotal}</span></p></div>
           <div><p className={style.pledgeInfo}>pledged of ${this.state.pledgeInfo.pledgeGoal} goal</p></div>

@@ -1,7 +1,5 @@
 
-.pledge-info-container {
-  border: 1px solid black;
-}
+.pledge-info-container {}
 
 .pledge-info {}
 
@@ -17,4 +15,17 @@ Pledge-Info-pledge-info-number {
 .pledge-info-remind-btn {}
 
 .pledge-info-time-stamp {}
+
+
+
+
+.pledge-support-amount-container {}
+
+.pledge-support-amount {}
+
+.pledge-support-description {}
+
+.pledge-support-shipping {}
+
+.pledge-support-includes {}
 

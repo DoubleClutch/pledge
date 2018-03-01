@@ -1,0 +1,75 @@
+
+* {
+  font-family: 'Arimo', 'Montserrat', sans-serif;
+  background-color: #fbfbfa;
+}
+
+#pledge-info {}
+
+.pledge-info-container {
+  border-top: 0.25em solid #009E74;
+  padding-top: 1em;
+}
+
+.pledge-info {
+  color: #656969;
+  font-size: 1.16em;
+  margin-top: -1em;
+}
+
+.pledge-info-number {
+  font-size: 2em;
+  margin-top: 0.25em;
+}
+
+.pledge-info-number span {
+  color: #017360;
+  margin-top: 2em;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  transition: all 0.25s ease-in-out;  
+  box-shadow: 0 8px 10px -6px #DCDEDD;
+}
+
+.pledge-info-project-btn {
+  background-color: #009E74;
+  color: #fff;
+  height: 3.5em;
+  margin-top: 2em;
+  font-size: 1.25em;
+}
+
+.pledge-info-project-btn:hover {
+  background-color: #037362;
+}
+
+
+
+.pledge-info-remind-btn {
+  border: 1px solid #dcdedd;
+  background-color: #fff;
+  height: 3.5em;
+  margin-top: 1.25em;
+  font-size: 1em;
+}
+
+.pledge-info-remind-btn:hover {
+  border: 1.5px solid #000;
+}
+
+.fa-heart {
+  font-size: 1.3em;
+}
+
+.pledge-info-time-stamp {
+  color: #282828;
+  margin-top: 3em;
+}
+
+.pledge-info-time-stamp span {
+  padding-bottom: 0.2em;
+  border-bottom: 1px solid #282828;
+  cursor: pointer;
+}
