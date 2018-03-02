@@ -9,17 +9,17 @@ class PledgeSupport extends React.Component {
     this.state = {};
   }
 
-  // componentDidMount() {
-  //   this.testUpdateState();
-  // }
-
   componentDidMount() {
-    if (this.props.id) {
-      this.getData(this.props.id);
-    } else {
-      this.getData(2);
-    }
+    this.testUpdateState();
   }
+
+  // componentDidMount() {
+  //   if (this.props.id) {
+  //     this.getData(this.props.id);
+  //   } else {
+  //     this.getData(2);
+  //   }
+  // }
 
   getData(id) {
     $.ajax({
@@ -50,7 +50,8 @@ class PledgeSupport extends React.Component {
             pledgeDescription: {
               title: 'Heartbeat',
               description: 'I hear you! Receive my heartfelt thanks and an exclusive Once Upon A Coma backer wallpaper + ringtone set!',
-              includes: ['Kickstarter-Exclusive Digital Wallpaper & Ringtone Set']
+              // includes: ['Kickstarter-Exclusive Digital Wallpaper & Ringtone Set']
+              includes: null
             },
             deliveryDate: 'Oct 2018',
             shipsTo: 'Anywhere in the world',
