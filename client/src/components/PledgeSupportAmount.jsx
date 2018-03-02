@@ -1,5 +1,5 @@
 import React from 'react';
-import style from './../css/PledgeSupportAmount.css';
+import style from './../css/pledgeSupportAmount.css';
 import Includes from './Includes.jsx';
 import Shipping from './Shipping.jsx';
 
