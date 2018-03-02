@@ -31,5 +31,6 @@ let methods = {
     }
   }
 
-
-methods.save(data.testData)
+data.testData.forEach(project => {
+  methods.save(project)
+});

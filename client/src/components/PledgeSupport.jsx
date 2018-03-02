@@ -17,7 +17,7 @@ class PledgeSupport extends React.Component {
     if (this.props.id) {
       this.getData(this.props.id);
     } else {
-      this.getData(8);
+      this.getData(2);
     }
   }
 

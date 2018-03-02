@@ -48,11 +48,132 @@ let pledgeSupportData = JSON.stringify([
   }
 ]);
 
-let testData = {
-  projectId: '8',
-  pledgeInfo: createInfoData('9,999', '8,000', 420, 15),
-  pledgeSupport: pledgeSupportData
+const createSupportData = (amount, title, desc, array, date, ships, backers) => {
+  return {
+    pledgeAmount: amount,
+    pledgeDescription: {
+      title: title,
+      description: desc,
+      includes: array
+    },
+    deliveryDate: date,
+    shipsTo: ships,
+    backers: backers
+  };
 }
+
+let supportDataArray1 = []
+
+supportDataArray1.push(createSupportData(
+  5,
+  'Heartbeat',
+  'I hear you! Receive my heartfelt thanks and an exclusive Once Upon A Coma backer wallpaper + ringtone set!',
+  ['Kickstarter-Exclusive Digital Wallpaper & Ringtone Set'],
+  'Oct 2018',
+  'Anywhere in the world',
+  59
+));
+
+
+supportDataArray1.push(createSupportData(
+  15, 
+  'Patient', 
+  'Experience Pete’s strange coma in the digital copy of Once Upon A Coma on Steam, GOG, or GameJolt (Windows, Mac or Linux), plus early-access to the exclusive beta version of the game!',
+  [
+    'Once Upon A Coma Digital Copy (Steam/GOG)',
+    'Kickstarter-Exclusive Digital Wallpaper & Ringtone Set',
+    'Once Upon A Coma Discord access!'
+  ],
+  'Oct 2018',
+  'Anywhere in the world',
+  625
+));
+
+supportDataArray1.push(createSupportData(
+  25,
+  'Doctor',
+  'Enjoy a digital copy of Once Upon A Coma’s gorgeous and haunting 20-song soundtrack written by Thomas Brush. You\'ll also receive a digital book full of the game’s gorgeous hi-res hand-drawn art! Oh, and get your name in the credits!',
+  [
+    'Once Upon A Coma Digital Copy (Steam/GOG)',
+    'Name in credits as "Doctor"!',
+    'Official 20-Song Soundtrack by Thomas Brush',
+    'Digital High Res Art Book',
+    'Kickstarter-Exclusive Digital Wallpaper & Ringtone Set',
+    'Once Upon A Coma Discord access!'
+  ],
+  'Oct 2018',
+  'Anywhere in the world',
+  569
+));
+
+supportDataArray1.push(createSupportData(
+  40,
+  'Neurosurgeon',
+  'Itching to cut deep inside Pete’s strange and haunting mind? Get exclusive access to the Once Upon A Coma alpha, and also receive a Coma University M.D. Certificate signed by Thomas Brush. Plus, your name will appear in the credits as part of the elite “Neurosurgeons”. (Certificate is digital only if outside U.S.)',
+  [
+    'Once Upon A Coma Digital Copy (Steam/GOG)',
+    'M.D. Certificate from Coma University signed by Thomas Brush',
+    'Name in credits as "Neurosurgeon"!',
+    'Exclusive Alpha Access!',
+    'Official 20-Song Soundtrack by Thomas Brush',
+    'Digital High Res Art Book',
+    'Kickstarter-Exclusive Digital Wallpaper & Ringtone Set',
+    'Once Upon A Coma Discord access!'
+  ],
+  'Oct 2018',
+  'Anywhere in the world',
+  126
+));
+
+supportDataArray1.push(createSupportData(
+  65,
+  'Neurosurgeon',
+  'Itching to cut deep inside Pete’s strange and haunting mind? Get exclusive access to the Once Upon A Coma alpha, and also receive a Coma University M.D. Certificate signed by Thomas Brush. Plus, your name will appear in the credits as part of the elite “Neurosurgeons”. (Certificate is digital only if outside U.S.)',
+  [
+    'Once Upon A Coma Digital Copy (Steam/GOG)',
+    'Your name projected on the wall of Bloodwick Movie Theatre!',
+    'M.D. Certificate from Coma University signed by Thomas Brush',
+    'Name in credits as "Neurosurgeon"!',
+    'Exclusive Alpha Access!',
+    'Official 20-Song Soundtrack by Thomas Brush',
+    'Digital High Res Art Book',
+    'Kickstarter-Exclusive Digital Wallpaper & Ringtone Set',
+    'Once Upon A Coma Discord access!'
+  ],
+  'Oct 2018',
+  'Anywhere in the world',
+  124
+));
+
+let project1 = {
+  projectId: '1',
+  pledgeInfo: createInfoData('10,755', '8,000', 420, 15),
+  pledgeSupport: JSON.stringify(supportDataArray1) 
+}
+
+let supportDataArray2 = []
+
+supportDataArray2.push(createSupportData(
+  199,
+  'Kickstarter-only HALF PRICE SPECIAL',
+  'Get your LeviZen Early and SAVE $200 (After-Campaign Price: $399) As seen in our previous campaign, our products are offered at a significantly lower price (even up to half-price), only during the Kickstarter campaign.',
+  [
+    'LeviZen Liquid Levitating Machine',
+    '100-240V 50/60Hz AC Power Adapter with US and International Plugs',
+    'Custom Liquid Dispenser'
+  ],
+  'Jul 2018',
+  'Anywhere in the world',
+  59
+));
+
+let project2 = {
+  projectId: '2',
+  pledgeInfo: createInfoData('12,580', '15,000', 65, 48),
+  pledgeSupport: JSON.stringify(supportDataArray2) 
+}
+
+let testData = [project1, project2];
 
 module.exports.testData = testData;
 
