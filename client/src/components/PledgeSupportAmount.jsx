@@ -1,5 +1,5 @@
 import React from 'react';
-import style from './PledgeSupportAmount.css';
+import style from './../css/PledgeSupportAmount.css';
 import Includes from './Includes.jsx';
 
 const PledgeSupportAmount = (props) => (

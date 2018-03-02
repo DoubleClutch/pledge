@@ -1,6 +1,6 @@
 import React from 'react';
 import IncludedItem from './IncludedItem.jsx'
-import style from './includes.css';
+import style from './../css/includes.css';
 
 class Includes extends React.Component {
   render() {

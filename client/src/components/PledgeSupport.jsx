@@ -1,6 +1,6 @@
 import React from 'react';
 import $ from "jquery";
-import style from './PledgeSupport.css';
+import style from './../css/PledgeSupport.css';
 import PledgeSupportAmount from './PledgeSupportAmount.jsx'
 
 class PledgeSupport extends React.Component {

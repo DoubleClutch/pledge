@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react';
 import $ from "jquery";
-import style from './PledgeInfo.css';
+import style from './../css/PledgeInfo.css';
 // import style from './../main.css';
 // import './../main.css';
 
