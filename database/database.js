@@ -4,16 +4,10 @@ mongoose.connect('mongodb://localhost/pledge');
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
-  // we're connected!
   console.log('connected to mongoDB')
 });
 
 var pledgeSchema = mongoose.Schema({
-//   quantity: Number,
-//   description: {
-//     type: mongoose.Schema.Types.String,
-//     unique: true
-//   }
   projectId: Number,
   pledgeInfo: String,
   pledgeSupport: String
@@ -21,25 +15,8 @@ var pledgeSchema = mongoose.Schema({
 
 var PledgeModel = mongoose.model('PledgeModel', pledgeSchema);
 
-let methods = {
+let find = (id, callback) => {
+  PledgeModel.find().where('projectId').equals(id).exec(callback);
+}
 
-    save: (obj) => {
-      let listDocument = new PledgeModel({
-        quantity: obj.quantity,
-        description: obj.description
-      })
-      listDocument.save(function (err) {
-        if (err) return console.error(err);
-      });
-    },
-
-    find: (callback) => {
-      PledgeModel.find(callback);
-    },
-    
-    findItem: (body, callback) => {
-      PledgeModel.find(callback).where('description').equals(body.description);
-    }
-  }
-
-  module.exports.methods = methods;
+module.exports.find = find;

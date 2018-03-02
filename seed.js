@@ -4,7 +4,6 @@ mongoose.connect('mongodb://localhost/pledge');
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
-  // we're connected!
   console.log('connected to mongoDB')
 });
 
@@ -27,21 +26,13 @@ let methods = {
       listDocument.save(function (err) {
         if (err) return console.error(err);
       });
-    },
-
-    find: (callback) => {
-      PledgeModel.find(callback);
-    },
-    
-    findItem: (body, callback) => {
-      PledgeModel.find(callback).where('description').equals(body.description);
     }
   }
 
 let date = new Date();
 
 let pledgeInfoData = JSON.stringify({
-    pledgeTotal: '10,420',
+    pledgeTotal: '16,420',
     pledgeGoal: '7,500',
     backers: 352,
     daysToGo: 18,
@@ -79,7 +70,7 @@ let pledgeSupportData = JSON.stringify([
 
 
 let testData = {
-    projectId: 1,
+    projectId: '6',
     pledgeInfo: pledgeInfoData,
     pledgeSupport: pledgeSupportData
 }

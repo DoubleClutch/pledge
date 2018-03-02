@@ -7,12 +7,14 @@ let app = express();
 app.use(bodyParser.json());
 
 app.use(express.static(__dirname + '/../client/dist'));
+// app.use('/:id', express.static(__dirname + '/../client/dist'));
 
-app.get('/', function (req, res) {
-  console.log('Server received a post request', req.body); 
-  mongoose.methods.find(function (err, pledgeModels) {
+app.get('/:id', function (req, res) {
+  console.log('req.params', req.params.id);
+  console.log('Server received a post request', req.url); 
+  mongoose.find(req.params.id, function (err, pledgeModels) {
     if (err) return console.error(err);
-    // console.log(listObjects);
+    console.log(pledgeModels);
     res.send(JSON.stringify(pledgeModels[0]));
   });
 });

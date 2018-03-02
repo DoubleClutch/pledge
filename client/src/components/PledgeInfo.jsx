@@ -23,9 +23,10 @@ class PledgeInfo extends Component {
   getData() {
     $.ajax({
       type: "GET",
-      url: '/',
+      url: '/6',
       contentType: 'application/json',
       success: (data) => {
+        console.log('raw data: ', JSON.parse(data))
         let info = JSON.parse(data).pledgeInfo;
         console.log('successful GET from server', info);
         info = JSON.parse(info);
@@ -55,7 +56,7 @@ class PledgeInfo extends Component {
   
   render() {
     if (this.state.pledgeInfo) {
-      // console.log(style)
+      console.log('pledgeInfo props', this.props)
       return (
 
         <div className={style.pledgeInfoContainer}>
