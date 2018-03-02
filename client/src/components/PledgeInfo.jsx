@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react';
 import $ from "jquery";
-import style from './PledgeInfo.css';
+import style from './../css/pledgeInfo.css';
 // import style from './../main.css';
 // import './../main.css';
 
@@ -20,7 +20,7 @@ class PledgeInfo extends Component {
     if (this.props.id) {
       this.getData(this.props.id);
     } else {
-      this.getData(6);
+      this.getData(8);
     }
   }
 
@@ -30,9 +30,9 @@ class PledgeInfo extends Component {
       url: '/' + id,
       contentType: 'application/json',
       success: (data) => {
-        console.log('raw data: ', JSON.parse(data))
+        // console.log('raw data: ', JSON.parse(data))
         let info = JSON.parse(data).pledgeInfo;
-        console.log('successful GET from server', info);
+        // console.log('successful GET from server', info);
         info = JSON.parse(info);
         this.setState({
           pledgeInfo: info
@@ -76,7 +76,11 @@ class PledgeInfo extends Component {
         </div>
       )
     } else {
-      return null;
+      return (
+        <div className={style.pledgeInfoContainer}>
+          <p className={style.pledgeInfoNumber}> Loading... </p>
+        </div>
+      );
     }
   }
 }

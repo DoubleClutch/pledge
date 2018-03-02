@@ -1,5 +1,6 @@
 import React from 'react';
-import style from './PledgeSupport.css';
+import $ from "jquery";
+import style from './../css/pledgeSupport.css';
 import PledgeSupportAmount from './PledgeSupportAmount.jsx'
 
 class PledgeSupport extends React.Component {
@@ -8,8 +9,36 @@ class PledgeSupport extends React.Component {
     this.state = {};
   }
 
+  // componentDidMount() {
+  //   this.testUpdateState();
+  // }
+
   componentDidMount() {
-    this.testUpdateState();
+    if (this.props.id) {
+      this.getData(this.props.id);
+    } else {
+      this.getData(8);
+    }
+  }
+
+  getData(id) {
+    $.ajax({
+      type: "GET",
+      url: '/' + id,
+      contentType: 'application/json',
+      success: (data) => {
+        // console.log('raw data: ', JSON.parse(data))
+        let info = JSON.parse(data).pledgeSupport;
+        // console.log('successful GET from server', info);
+        info = JSON.parse(info);
+        this.setState({
+          pledgeSupportAmounts: info
+        });
+      },
+      error: (error) => {
+        console.error('There was an error with the POST request', error);
+      }
+    })
   }
 
   testUpdateState () {
@@ -21,7 +50,8 @@ class PledgeSupport extends React.Component {
             pledgeDescription: {
               title: 'Heartbeat',
               description: 'I hear you! Receive my heartfelt thanks and an exclusive Once Upon A Coma backer wallpaper + ringtone set!',
-              includes: ['Kickstarter-Exclusive Digital Wallpaper & Ringtone Set']
+              // includes: ['Kickstarter-Exclusive Digital Wallpaper & Ringtone Set']
+              includes: null
             },
             deliveryDate: 'Oct 2018',
             shipsTo: 'Anywhere in the world',
@@ -70,7 +100,11 @@ class PledgeSupport extends React.Component {
         </div>
       );
     } else {
-      return null;
+      return (
+        <div className={style.pledgeSupportContainer}>
+          <h1 className={style.pledgeSupportMainTitle}>Loading...</h1>
+        </div>
+      );
     }
   }
 }

@@ -1,6 +1,7 @@
 import React from 'react';
-import style from './PledgeSupportAmount.css';
-import Includes from './Includes.jsx'
+import style from './../css/pledgeSupportAmount.css';
+import Includes from './Includes.jsx';
+import Shipping from './Shipping.jsx';
 
 const PledgeSupportAmount = (props) => (
   <div className={style.pledgeSupportAmountContainer}>
@@ -11,27 +12,14 @@ const PledgeSupportAmount = (props) => (
       <h4>{props.value.pledgeDescription.title}</h4>
       <div>
         <p>{props.value.pledgeDescription.description}</p>
+
+        <Includes included={props.value.pledgeDescription.includes}/>
         
-        <p className={style.pledgeSupportStaticInfoSmall}>INLCUDES:</p>
-        <ul>
-        {props.value.pledgeDescription.includes.map((item, index) =>(
-          <Includes value={item} key={index}/>
-        ))}
-        </ul>
       </div>
     </div>
 
-    <div className={style.pledgeSupportShipping}>
-      <div>
-        <p className={style.pledgeSupportStaticInfoSmall}>ESTIMATED DELIVERY</p>
-        {props.value.deliveryDate}
-      </div>
-      <div className={style.pledgeSupportShipsTo}>
-        <p className={style.pledgeSupportStaticInfoSmall}>SHIPS TO</p>
-        {props.value.shipsTo}
-      </div>
-      <p className={style.pledgeSupportStaticInfoSmall}> {props.value.backers} backers </p>
-    </div>
+    <Shipping shipsTo={props.value.shipsTo} deliveryDate={props.value.deliveryDate} backers={props.value.backers} />
+
   </div>
 );
 
