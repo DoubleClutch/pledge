@@ -30,7 +30,7 @@
         //   document.getElementById('updates')
         // );
         ReactDOM.render(
-          React.createElement(PledgeInfo),
+          React.createElement(PledgeInfo, {id: window.location.pathname.slice(1, window.location.pathname.length - 1)}),
           document.getElementById('pledge-info')
         );
       </script>

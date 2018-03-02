@@ -17,13 +17,17 @@ class PledgeInfo extends Component {
   //   this.testUpdateState();
   // }
   componentDidMount() {
-    this.getData();
+    if (this.props.id) {
+      this.getData(this.props.id);
+    } else {
+      this.getData(6);
+    }
   }
 
-  getData() {
+  getData(id) {
     $.ajax({
       type: "GET",
-      url: '/6',
+      url: '/' + id,
       contentType: 'application/json',
       success: (data) => {
         console.log('raw data: ', JSON.parse(data))
