@@ -14,7 +14,7 @@ app.get('/:id', function (req, res) {
   console.log('Server received a post request', req.url); 
   mongoose.find(req.params.id, function (err, pledgeModels) {
     if (err) return console.error(err);
-    console.log(pledgeModels);
+    // console.log(pledgeModels);
     res.send(JSON.stringify(pledgeModels[0]));
   });
 });

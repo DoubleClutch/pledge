@@ -30,9 +30,9 @@ class PledgeInfo extends Component {
       url: '/' + id,
       contentType: 'application/json',
       success: (data) => {
-        console.log('raw data: ', JSON.parse(data))
+        // console.log('raw data: ', JSON.parse(data))
         let info = JSON.parse(data).pledgeInfo;
-        console.log('successful GET from server', info);
+        // console.log('successful GET from server', info);
         info = JSON.parse(info);
         this.setState({
           pledgeInfo: info

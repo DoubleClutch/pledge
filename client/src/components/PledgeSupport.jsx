@@ -1,4 +1,5 @@
 import React from 'react';
+import $ from "jquery";
 import style from './PledgeSupport.css';
 import PledgeSupportAmount from './PledgeSupportAmount.jsx'
 
@@ -8,8 +9,36 @@ class PledgeSupport extends React.Component {
     this.state = {};
   }
 
+  // componentDidMount() {
+  //   this.testUpdateState();
+  // }
+
   componentDidMount() {
-    this.testUpdateState();
+    if (this.props.id) {
+      this.getData(this.props.id);
+    } else {
+      this.getData(6);
+    }
+  }
+
+  getData(id) {
+    $.ajax({
+      type: "GET",
+      url: '/' + id,
+      contentType: 'application/json',
+      success: (data) => {
+        // console.log('raw data: ', JSON.parse(data))
+        let info = JSON.parse(data).pledgeSupport;
+        // console.log('successful GET from server', info);
+        info = JSON.parse(info);
+        this.setState({
+          pledgeSupportAmounts: info
+        });
+      },
+      error: (error) => {
+        console.error('There was an error with the POST request', error);
+      }
+    })
   }
 
   testUpdateState () {
