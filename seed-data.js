@@ -237,13 +237,158 @@ let project3 = {
   pledgeSupport: JSON.stringify(supportDataArray3) 
 }
 
+let supportDataArray4 = []
+
+supportDataArray4.push(createSupportData(
+  1,
+  'Factory Tour of the forge.',
+  'A digital high five and our sincere thanks. Receive email updates on the project. We\'ll send out the digital PnP to you when the project is complete.',
+  null,
+  'May 2018',
+  null,
+  16
+));
+
+supportDataArray4.push(createSupportData(
+  29,
+  'Swordcrafters Retail Edition',
+  'Retail edition of Swordcrafters + all stretch goals. (est. $35 MSPR)',
+  [
+    'Swordcrafters Retail edition',
+    'All unlocked Stretch Goals',
+    'Money-back Guarantee',
+    'Subsidized shipping (Free to US)'
+  ],
+  'Sep 2018',
+  'Anywhere in the world',
+  20
+));
+
+supportDataArray4.push(createSupportData(
+  39,
+  'Swordcrafters Expanded Edition',
+  'Exclusive to KS and cons, the expanded edition includes upgraded components, base game, and the first Swordcrafters expansion that will not hit retail for at least 6mo after KS delivery. (est. $35 + $20 MSRP)',
+  [
+    'Swordcrafters Retail edition',
+    'KS Exclusive wooden forge token',
+    'All unlocked Stretch Goals',
+    'Money-back Guarantee',
+    'Custom insert fits both base and expansion',
+    'Expanded Edition box sleeve'
+  ],
+  'Sep 2018',
+  'Anywhere in the world',
+  180
+));
+
+supportDataArray4.push(createSupportData(
+  40,
+  'Swordcrafters Game (Retailer tier)',
+  'Only available to retail stores, proof will be required. After you pledge, we will contact you with further information',
+  null,
+  'Sep 2018',
+  'Only certain countries',
+  0
+));
+
+supportDataArray4.push(createSupportData(
+  41,
+  'Swordcrafters Game (Retailer tier)',
+  'Only available to retail stores and the only way this edition will hit retail, proof will be required. After you pledge, we will contact you with further information.',
+  null,
+  'Sep 2018',
+  'Only certain countries',
+  2
+));
+
+supportDataArray4.push(createSupportData(
+  56,
+  'Two Copies - Retail Edition',
+  'Two copies of retail edition of Swordcrafters + all stretch goals. (est. $35 MSRP)',
+  [
+    'All unlocked Stretch Goals',
+    'Money-back Guarantee',
+    'Subsidized shipping (Free to US)',
+    'Swordcrafters Retail edition' 
+  ],
+  'Sep 2018',
+  'Anywhere in the world',
+  0
+));
+
+supportDataArray4.push(createSupportData(
+  76,
+  'Two Copies - Expanded Edition',
+  'Exclusive to KS and cons, the expanded edition includes upgraded components, base game, and the first Swordcrafters expansion that will not hit retail for at least 6mo after KS delivery. (est. $35 + $20 MSRP)',
+  [
+    'KS Exclusive wooden forge token',
+    'All unlocked Stretch Goals',
+    'Money-back Guarantee',
+    'Custom insert fits both base and expansion',
+    'Expanded Edition box sleeve',
+    'Subsidized shipping (Free to US)',
+    'Swordcrafters Retail edition'
+  ],
+  'Sep 2018',
+  'Anywhere in the world',
+  3
+));
+
 let project4 = {
   projectId: '4',
-  pledgeInfo: createInfoData('5,245', '2,000', 128, 37),
-  pledgeSupport: JSON.stringify(supportDataArray3) 
+  pledgeInfo: createInfoData('9,704', '10,000', 230, 18),
+  pledgeSupport: JSON.stringify(supportDataArray4) 
 }
 
-let testData = [project1, project2, project3];
+let supportDataArray5 = []
+
+supportDataArray5.push(createSupportData(
+  2,
+  'LACTOSE INTOLERANT',
+  'Can\'t handle the cheese? Get behind the scenes updates and notification of the final nacho GIFs and video.',
+  null,
+  'Mar 2018',
+  null,
+  14
+));
+
+supportDataArray5.push(createSupportData(
+  5,
+  'BALLPARK',
+  'Bring a topping of your choice and make your own plate of nachos. Plus, get all exclusive backer-only updates.',
+  null,
+  'Mar 2018',
+  null,
+  7
+));
+
+supportDataArray5.push(createSupportData(
+  10,
+  'SUPREME',
+  'Make a boat of your own personal nacho and commemorate it with a GIF and video. Plus, get all exclusive backer-only updates.',
+  null,
+  'Mar 2018',
+  null,
+  12
+));
+
+supportDataArray5.push(createSupportData(
+  15,
+  'STUFFED',
+  'Make your own nacho and document it. Plus, you get to help eat the SUPER NACHO BOWL and get all exclusive backer-only updates.',
+  null,
+  'Mar 2018',
+  null,
+  25
+));
+
+let project5 = {
+  projectId: '5',
+  pledgeInfo: createInfoData('1,045', '1,000', 60, 2),
+  pledgeSupport: JSON.stringify(supportDataArray5) 
+}
+
+let testData = [project1, project2, project3, project4, project5];
 
 module.exports.testData = testData;
 
