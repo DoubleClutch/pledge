@@ -1,6 +1,7 @@
 import React from 'react';
 import style from './../css/PledgeSupportAmount.css';
 import Includes from './Includes.jsx';
+import Shipping from './Shipping.jsx';
 
 const PledgeSupportAmount = (props) => (
   <div className={style.pledgeSupportAmountContainer}>
@@ -17,17 +18,8 @@ const PledgeSupportAmount = (props) => (
       </div>
     </div>
 
-    <div className={style.pledgeSupportShipping}>
-      <div>
-        <p className={style.pledgeSupportStaticInfoSmall}>ESTIMATED DELIVERY</p>
-        {props.value.deliveryDate}
-      </div>
-      <div className={style.pledgeSupportShipsTo}>
-        <p className={style.pledgeSupportStaticInfoSmall}>SHIPS TO</p>
-        {props.value.shipsTo}
-      </div>
-      <p className={style.pledgeSupportStaticInfoSmall}> {props.value.backers} backers </p>
-    </div>
+    <Shipping shipsTo={props.value.shipsTo} deliveryDate={props.value.deliveryDate} backers={props.value.backers} />
+
   </div>
 );
 

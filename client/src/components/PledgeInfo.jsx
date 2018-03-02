@@ -20,7 +20,7 @@ class PledgeInfo extends Component {
     if (this.props.id) {
       this.getData(this.props.id);
     } else {
-      this.getData(3);
+      this.getData(4);
     }
   }
 

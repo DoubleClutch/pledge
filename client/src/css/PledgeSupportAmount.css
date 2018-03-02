@@ -10,14 +10,6 @@
   font-weight: 100;
 }
 
-.pledgeSupportStaticInfoSmall {
-  font-size: 0.75em;
-  font-weight: 100;
-  color: #656969;
-  margin-top: 3em;
-  margin-bottom: 0.5em;
-}
-
 .pledgeSupportDescription {
   font-size: 1em;
   color: #727575;
@@ -34,11 +26,4 @@
   padding: 0.5em 0;
 }
 
-.pledgeSupportShipping div {
-  display: inline-block;
-}
-
-.pledgeSupportShipsTo {
-  float: right;
-}
 
