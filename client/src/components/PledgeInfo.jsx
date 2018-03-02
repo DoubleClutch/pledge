@@ -1,5 +1,6 @@
 
 import React, { Component } from 'react';
+import $ from "jquery";
 import style from './PledgeInfo.css';
 // import style from './../main.css';
 // import './../main.css';
@@ -12,8 +13,35 @@ class PledgeInfo extends Component {
     this.state = {}
   }
 
+  // componentDidMount() {
+  //   this.testUpdateState();
+  // }
   componentDidMount() {
-    this.testUpdateState();
+    if (this.props.id) {
+      this.getData(this.props.id);
+    } else {
+      this.getData(6);
+    }
+  }
+
+  getData(id) {
+    $.ajax({
+      type: "GET",
+      url: '/' + id,
+      contentType: 'application/json',
+      success: (data) => {
+        console.log('raw data: ', JSON.parse(data))
+        let info = JSON.parse(data).pledgeInfo;
+        console.log('successful GET from server', info);
+        info = JSON.parse(info);
+        this.setState({
+          pledgeInfo: info
+        });
+      },
+      error: (error) => {
+        console.error('There was an error with the POST request', error);
+      }
+    })
   }
 
   testUpdateState () {
@@ -32,7 +60,7 @@ class PledgeInfo extends Component {
   
   render() {
     if (this.state.pledgeInfo) {
-      console.log(style)
+      console.log('pledgeInfo props', this.props)
       return (
 
         <div className={style.pledgeInfoContainer}>

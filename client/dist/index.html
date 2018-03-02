@@ -18,8 +18,14 @@
       <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
       <script src="http://localhost:3001/bundle.js"></script>
       <script>
+        // pass id down to component
+        // ReactDOM.render(    
+        //   React.createElement(Updates, 
+        //   {ID: window.location.pathname.slice(1, window.location.pathname.length - 1)}),
+        //   document.getElementById('updates')
+        // );
         ReactDOM.render(
-          React.createElement(PledgeInfo),
+          React.createElement(PledgeInfo, {id: window.location.pathname.slice(1, window.location.pathname.length - 1)}),
           document.getElementById('pledge-info')
         );
       </script>
