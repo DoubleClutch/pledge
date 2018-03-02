@@ -173,7 +173,77 @@ let project2 = {
   pledgeSupport: JSON.stringify(supportDataArray2) 
 }
 
-let testData = [project1, project2];
+let supportDataArray3 = []
+
+supportDataArray3.push(createSupportData(
+  7,
+  'eBook Me!',
+  'You handsome devil, you. Snag an eBook and be gone!',
+  [
+    'eBook of Couriers: OFF GRID',
+    'eBook of Shadows of the Highridge'
+  ],
+  'May 2018',
+  'Anywhere in the world',
+  42
+));
+
+supportDataArray3.push(createSupportData(
+  15,
+  'Paperback Me!',
+  'Well, don\'t mind if I do. Take a paperback for the road my friend.',
+  [
+    'Paperback of Couriers: OFF GRID',
+    'eBook of Couriers: OFF GRID',
+    'eBook of Shadows of the Highridge'
+  ],
+  'Sept 2018',
+  'Only certain countries',
+  27
+));
+
+supportDataArray3.push(createSupportData(
+  25,
+  'Hardcover Me!',
+  'The Kickstarter Exclusive, limited edition hardcover. These will only be available through the Kickstarter campaign (and any immediate followup).',
+  [
+    'Paperback of Couriers: OFF GRID',
+    'eBook of Couriers: OFF GRID',
+    'eBook of Shadows of the Highridge'
+  ],
+  'Sept 2018',
+  'Only certain countries',
+  51
+));
+
+supportDataArray3.push(createSupportData(
+  250,
+  'Immortalize Me!',
+  'Be immortalized on the chassis of a pre-Burn SlitPod (see description for drafted sketches)! They were popular rides before the apocalypse, and your name could be on one today! Includes the rewards unlocked in all lower levels as well.',
+  [
+    'Paperback of Couriers: OFF GRID',
+    'Name a SlitPod (restrictions apply)',
+    'eBook of Couriers: OFF GRID',
+    'eBook of Shadows of the Highridge'
+  ],
+  'Sept 2018',
+  'Only certain countries',
+  4
+));
+
+let project3 = {
+  projectId: '3',
+  pledgeInfo: createInfoData('5,245', '2,000', 128, 37),
+  pledgeSupport: JSON.stringify(supportDataArray3) 
+}
+
+let project4 = {
+  projectId: '4',
+  pledgeInfo: createInfoData('5,245', '2,000', 128, 37),
+  pledgeSupport: JSON.stringify(supportDataArray3) 
+}
+
+let testData = [project1, project2, project3];
 
 module.exports.testData = testData;
 
