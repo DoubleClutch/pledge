@@ -20,7 +20,7 @@ class PledgeInfo extends Component {
     if (this.props.id) {
       this.getData(this.props.id);
     } else {
-      this.getData(4);
+      this.getData(8);
     }
   }
 
@@ -76,7 +76,11 @@ class PledgeInfo extends Component {
         </div>
       )
     } else {
-      return null;
+      return (
+        <div className={style.pledgeInfoContainer}>
+          <p className={style.pledgeInfoNumber}> Loading... </p>
+        </div>
+      );
     }
   }
 }

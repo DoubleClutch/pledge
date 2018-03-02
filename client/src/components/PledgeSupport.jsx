@@ -17,7 +17,7 @@ class PledgeSupport extends React.Component {
     if (this.props.id) {
       this.getData(this.props.id);
     } else {
-      this.getData(4);
+      this.getData(8);
     }
   }
 
@@ -100,7 +100,11 @@ class PledgeSupport extends React.Component {
         </div>
       );
     } else {
-      return null;
+      return (
+        <div className={style.pledgeSupportContainer}>
+          <h1 className={style.pledgeSupportMainTitle}>Loading...</h1>
+        </div>
+      );
     }
   }
 }
