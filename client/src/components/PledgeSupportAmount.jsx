@@ -1,6 +1,6 @@
 import React from 'react';
 import style from './PledgeSupportAmount.css';
-import HasIncludes from './HasIncludes.jsx';
+import Includes from './Includes.jsx';
 
 const PledgeSupportAmount = (props) => (
   <div className={style.pledgeSupportAmountContainer}>
@@ -11,14 +11,9 @@ const PledgeSupportAmount = (props) => (
       <h4>{props.value.pledgeDescription.title}</h4>
       <div>
         <p>{props.value.pledgeDescription.description}</p>
+
+        <Includes included={props.value.pledgeDescription.includes}/>
         
-        {/* <p className={style.pledgeSupportStaticInfoSmall}>INLCUDES:</p> */}
-        <HasIncludes hasIncludes={props.value.pledgeDescription.includes}/>
-        {/* <ul>
-        {props.value.pledgeDescription.includes.map((item, index) =>(
-          <Includes value={item} key={index}/>
-        ))}
-        </ul> */}
       </div>
     </div>
 

@@ -9,17 +9,17 @@ class PledgeSupport extends React.Component {
     this.state = {};
   }
 
-  componentDidMount() {
-    this.testUpdateState();
-  }
-
   // componentDidMount() {
-  //   if (this.props.id) {
-  //     this.getData(this.props.id);
-  //   } else {
-  //     this.getData(2);
-  //   }
+  //   this.testUpdateState();
   // }
+
+  componentDidMount() {
+    if (this.props.id) {
+      this.getData(this.props.id);
+    } else {
+      this.getData(2);
+    }
+  }
 
   getData(id) {
     $.ajax({
