@@ -388,7 +388,22 @@ let project5 = {
   pledgeSupport: JSON.stringify(supportDataArray5) 
 }
 
-let testData = [project1, project2, project3, project4, project5];
+let dataArchetypes = [project1, project2, project3, project4, project5];
+
+testData = [];
+let count = 0;
+
+for (let i = 1; i <= 200; i++) {
+  let dataObject = {};
+  dataObject.projectId = i.toString();
+  dataObject.pledgeInfo = dataArchetypes[count].pledgeInfo;
+  dataObject.pledgeSupport = dataArchetypes[count].pledgeSupport;
+  testData.push(dataObject)
+  count++;
+  if (count === 5) {
+    count = 0;
+  }
+}
 
 module.exports.testData = testData;
 
