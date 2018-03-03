@@ -8,6 +8,9 @@ const PledgeSupportAmount = (props) => (
     <div className={style.pledgeSupportAmount}>
       <h1>Pledge ${props.value.pledgeAmount} or more</h1>
     </div>
+    
+    <h2 className={style.hoverText} >Select this reward</h2>
+
     <div className={style.pledgeSupportDescription}>
       <h4>{props.value.pledgeDescription.title}</h4>
       <div>

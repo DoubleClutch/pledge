@@ -5,6 +5,10 @@
   padding: 3em;
 }
 
+.pledgeSupportAmountContainer:hover {
+  background: rgba(0,158,116,0.9);
+}
+
 .pledgeSupportAmount h1 {
   font-size: 1.75em;
   font-weight: 100;
