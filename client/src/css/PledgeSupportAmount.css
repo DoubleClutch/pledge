@@ -6,7 +6,31 @@
 }
 
 .pledgeSupportAmountContainer:hover {
-  background: rgba(0,158,116,0.9);
+  background: rgba(0, 158, 116, 0.9);
+}
+
+.hover {
+  position: relative;
+  height: 1em;
+  left: 33%;
+  width: 20em;
+}
+
+.hover h3 {
+  color: #fff;
+  position: absolute;
+  top: 450%;
+  right: 25%;
+  opacity: 0;
+  z-index: 2;
+}
+
+.pledgeSupportAmountContainer:hover .pledgeSupportDescription .hover h3 {
+  opacity: 1;
+}
+
+.pledgeSupportAmountContainer:hover .pledgeSupportAmount, .pledgeSupportAmountContainer:hover .pledgeSupportDescription li, .pledgeSupportAmountContainer:hover .pledgeSupportDescription h4, .pledgeSupportAmountContainer:hover .pledgeSupportDescription p {
+  opacity: 0.5;
 }
 
 .pledgeSupportAmount h1 {
