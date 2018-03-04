@@ -2,10 +2,6 @@
 import React, { Component } from 'react';
 import $ from "jquery";
 import style from './../css/pledgeInfo.css';
-// import style from './../main.css';
-// import './../main.css';
-
-const date = new Date(); // temporary work around
 
 class PledgeInfo extends Component {
   constructor(props) {
@@ -13,9 +9,6 @@ class PledgeInfo extends Component {
     this.state = {}
   }
 
-  // componentDidMount() {
-  //   this.testUpdateState();
-  // }
   componentDidMount() {
     if (this.props.id) {
       this.getData(this.props.id);
@@ -30,13 +23,19 @@ class PledgeInfo extends Component {
       url: '/pledge/' + id,
       contentType: 'application/json',
       success: (data) => {
-        // console.log('raw data: ', JSON.parse(data))
-        let info = JSON.parse(data).pledgeInfo;
-        // console.log('successful GET from server', info);
-        info = JSON.parse(info);
-        this.setState({
-          pledgeInfo: info
-        });
+        console.log('state:', this.state)
+        console.log('props:', this.props)
+        // console.log('raw data: ', data)
+        
+        if (typeof data === 'string') {
+          
+          let info = JSON.parse(data).pledgeInfo;
+          // console.log('successful GET from server', info);
+          info = JSON.parse(info);
+          this.setState({
+            pledgeInfo: info
+          });
+        }
       },
       error: (error) => {
         console.error('There was an error with the POST request', error);
@@ -44,19 +43,6 @@ class PledgeInfo extends Component {
     })
   }
 
-  testUpdateState () {
-    setTimeout(()=>{
-      this.setState({
-      pledgeInfo: {
-        pledgeTotal: '10,420',
-        pledgeGoal: '7,500',
-        backers: 352,
-        daysToGo: 18,
-        timeStamp: date.toString()
-      }
-      })
-    }, 250);
-  }
   
   render() {
     if (this.state.pledgeInfo) {

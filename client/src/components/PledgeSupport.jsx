@@ -9,10 +9,6 @@ class PledgeSupport extends React.Component {
     this.state = {};
   }
 
-  // componentDidMount() {
-  //   this.testUpdateState();
-  // }
-
   componentDidMount() {
     if (this.props.id) {
       this.getData(this.props.id);
@@ -41,42 +37,6 @@ class PledgeSupport extends React.Component {
     })
   }
 
-  testUpdateState () {
-    setTimeout(() => {
-      this.setState({
-        pledgeSupportAmounts: [
-          {
-            pledgeAmount: 5,
-            pledgeDescription: {
-              title: 'Heartbeat',
-              description: 'I hear you! Receive my heartfelt thanks and an exclusive Once Upon A Coma backer wallpaper + ringtone set!',
-              // includes: ['Kickstarter-Exclusive Digital Wallpaper & Ringtone Set']
-              includes: null
-            },
-            deliveryDate: 'Oct 2018',
-            shipsTo: 'Anywhere in the world',
-            backers: 59
-          },
-          {
-            pledgeAmount: 15,
-            pledgeDescription: {
-              title: 'Patient',
-              description: 'Experience Pete’s strange coma in the digital copy of Once Upon A Coma on Steam, GOG, or GameJolt (Windows, Mac or Linux), plus early-access to the exclusive beta version of the game!',
-              includes: [
-                'Once Upon A Coma Digital Copy (Steam/GOG)',
-                'Kickstarter-Exclusive Digital Wallpaper & Ringtone Set',
-                'Once Upon A Coma Discord access!'
-              ]
-            },
-            deliveryDate: 'Oct 2018',
-            shipsTo: 'Anywhere in the world',
-            backers: 625
-          }
-        ]
-      })
-    }, 250);
-  }
-  
   render() {
     if (this.state.pledgeSupportAmounts) {
       return (
