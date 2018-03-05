@@ -20,7 +20,7 @@ class PledgeSupport extends React.Component {
   getData(id) {
     $.ajax({
       type: "GET",
-      url: '/pledge/' + id,
+      url: 'http://localhost:3001/pledge/' + id,
       contentType: 'application/json',
       success: (data) => {
         // console.log('raw data: ', JSON.parse(data))

@@ -1,9 +1,10 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('./../database/database.js');
-
+let cors = require('cors');
 let app = express();
 
+app.use(cors())
 app.use(bodyParser.json());
 
 app.use(express.static(__dirname + '/../client/dist'));

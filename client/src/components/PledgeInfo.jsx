@@ -20,12 +20,12 @@ class PledgeInfo extends Component {
   getData(id) {
     $.ajax({
       type: "GET",
-      url: '/pledge/' + id,
+      url: 'http://localhost:3001/pledge/' + id,
       contentType: 'application/json',
       success: (data) => {
         console.log('state:', this.state)
         console.log('props:', this.props)
-        // console.log('raw data: ', data)
+        console.log('raw data: ', data)
         
         if (typeof data === 'string') {
           
