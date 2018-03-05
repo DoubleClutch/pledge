@@ -184,7 +184,7 @@ supportDataArray3.push(createSupportData(
     'eBook of Shadows of the Highridge'
   ],
   'May 2018',
-  'Anywhere in the world',
+  null,
   42
 ));
 
