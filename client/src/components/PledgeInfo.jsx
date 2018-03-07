@@ -25,7 +25,7 @@ class PledgeInfo extends Component {
       success: (data) => {
         console.log('state:', this.state)
         console.log('props:', this.props)
-        console.log('raw data: ', data)
+        // console.log('raw data: ', data)
         
         if (typeof data === 'string') {
           

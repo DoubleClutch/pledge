@@ -13,7 +13,7 @@ app.use('/:id', express.static(__dirname + '/../client/dist'));
 app.get('/pledge/:id', function (req, res) {
   console.log('req.params', req.params.id);
   console.log('Server received a post request', req.url); 
-  mongoose.find(req.params.id, function (err, pledgeModels) {
+  mongoose.methods.find(req.params.id, function (err, pledgeModels) {
     if (err) return console.error(err);
     // console.log(pledgeModels);
     res.send(JSON.stringify(pledgeModels[0]));
