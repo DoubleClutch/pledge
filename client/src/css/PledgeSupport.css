@@ -3,25 +3,27 @@
 }
 
 .pledgeSupportMainTitle {
-  font-size: 2em;
-  /* margin: 3em 0; */
+  font-size: 1.25em;
+  font-weight: 100;
+  margin-bottom: 2.5em;
 }
 
 .pledgeSupportMakePledgeComponent {
   border: 1px solid #dcdedd;
   text-align: center;
-  padding: 2em;
-  height: 8em;
+  /* padding: 2em; */
+  height: 9em;
 }
 
 .pledgeSupportMakePledgeComponent h2 {
   font-size: 1em;
-  /* padding: 0.75em 0; */
+  width: 100%;
+  margin: 1.5em 0;
 }
 
 .pledgeSupportMakePledgeComponent input {
   border: 1px solid #dcdedd;
-  width: 65%;
+  width: 78%;
   font-size: 1em;
   display: inline;
   height: 2.5em;
