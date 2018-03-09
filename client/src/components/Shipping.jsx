@@ -11,10 +11,10 @@ class Shipping extends React.Component {
         <div>
         <div className={style.pledgeSupportShipping}>
             <div>
-              <p className={style.pledgeSupportStaticInfoSmall}>ESTIMATED DELIVERY</p>
-              {this.props.deliveryDate}
+              <h5 className={style.pledgeSupportStaticInfoSmall}>ESTIMATED DELIVERY</h5>
+              <h6>{this.props.deliveryDate}</h6>
             </div>
-            <p className={style.pledgeSupportStaticInfoSmall}> {this.props.backers} backers </p>
+            <h5 className={style.pledgeSupportStaticInfoSmall}> {this.props.backers} backers </h5>
           </div>
         </div>
       )
@@ -23,14 +23,14 @@ class Shipping extends React.Component {
         <div>
           <div className={style.pledgeSupportShipping}>
             <div>
-              <p className={style.pledgeSupportStaticInfoSmall}>ESTIMATED DELIVERY</p>
-              {this.props.deliveryDate}
+              <h5 className={style.pledgeSupportStaticInfoSmall}>ESTIMATED DELIVERY</h5>
+              <h6>{this.props.deliveryDate}</h6>
             </div>
             <div className={style.pledgeSupportShipsTo}>
-              <p className={style.pledgeSupportStaticInfoSmall}>SHIPS TO</p>
-              {this.props.shipsTo}
+              <h5 className={style.pledgeSupportStaticInfoSmall}>SHIPS TO</h5>
+              <h6>{this.props.shipsTo}</h6>
             </div>
-            <p className={style.pledgeSupportStaticInfoSmall}> {this.props.backers} backers </p>
+            <h5 className={style.pledgeSupportStaticInfoSmall}> {this.props.backers} backers </h5>
           </div>
         </div>
       )

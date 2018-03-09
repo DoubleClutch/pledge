@@ -7,7 +7,7 @@ class Includes extends React.Component {
     if (this.props.included !== null  && this.props.included.length) {
       return (
         <div>
-          <p className={style.pledgeSupportIncludes}>INLCUDES:</p>
+          <h5 className={style.pledgeSupportIncludes}>INLCUDES:</h5>
           <ul>
             {this.props.included.map((item, index) =>(
               <IncludedItem value={item} key={index}/>
