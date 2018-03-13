@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/pledge');
+mongoose.connect('mongodb://database:27017/pledge');
 
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
@@ -29,7 +29,8 @@ let methods = {
     })
     listDocument.save(function (err) {
       if (err) return console.error(err);
-      console.log('Database successfully seeded')
+      console.log('Database successfully seeded');
+      mongoose.disconnect();
     });
   }
 }
